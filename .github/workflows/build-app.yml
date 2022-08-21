@@ -1,7 +1,6 @@
-name: Android Publish
+name: Build Test App
 
-on:
-  workflow_dispatch:
+on: [pull_request, push]
 
 jobs:
   build:
@@ -15,6 +14,16 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Fixing Android Build Tool Issue
+        run: |
+            cd $ANDROID_HOME/build-tools/33.0.0
+            mv d8 dx
+            cd lib
+            mv d8.jar dx.jar
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
@@ -36,9 +45,27 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.STORE_KEY_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
-      - name: Upload APK
+
+
+      - name: Create APKs
+        id: convert_aab
+        uses: mukeshsolanki/bundletool-action@v1.0.0
+        with:
+          aabFile: app/build/outputs/bundle/release/app-release.aab
+          base64Keystore: ${{ secrets.SIGN_KEY }}
+          keystoreAlias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.STORE_KEY_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Upload AAB
         uses: actions/upload-artifact@v1
         with:
           name: TestApps.aab
           path: app/build/outputs/bundle/release/app-release.aab
+
+      - name: Upload APKs
+        uses: actions/upload-artifact@v3
+        with:
+           name: TestApps.apks
+           path: ${{ steps.convert_aab.outputs.apkPath }}
 
