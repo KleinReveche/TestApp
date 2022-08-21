@@ -17,6 +17,10 @@ class AgeInMinutes : AppCompatActivity() {
     private var tvSelectedDateInHours : TextView? = null
     private var tvSelectedDateInDays : TextView? = null
 
+    private val sdf = SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH)
+    private val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
+    private val currentDateInMinutes = currentDate.time / 60000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_age_in_minutes)
@@ -25,6 +29,14 @@ class AgeInMinutes : AppCompatActivity() {
         tvSelectedDateInMinutes = findViewById(R.id.tvSelectedDateInMinutes)
         tvSelectedDateInHours = findViewById(R.id.tvSelectedDateInHours)
         tvSelectedDateInDays = findViewById(R.id.tvSelectedDateInDays)
+
+        var defaultDateInMinutes = currentDateInMinutes - 17723520
+        var defaultDateInHours = defaultDateInMinutes / 60
+        var defaultDateInDays = defaultDateInHours / 24
+
+        tvSelectedDateInMinutes?.text = defaultDateInMinutes?.toString()
+        tvSelectedDateInHours?.text = defaultDateInHours.toString()
+        tvSelectedDateInDays?.text = defaultDateInDays.toString()
 
         val btnBirthdatePicker : Button = findViewById(R.id.btnBirthdatePicker)
         btnBirthdatePicker.setOnClickListener{
@@ -50,15 +62,14 @@ class AgeInMinutes : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
 
                 val selectedDate = "0${selectedMonth + 1}/$SelectedDay/$selectedYear"
-                val sdf = SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH)
+                
                 val theDate = sdf.parse(selectedDate)
 
                theDate?.let{
                    val selectedDateInMinutes = theDate.time / 60000
-                   val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
                    currentDate?.let {
-                       val currentDateInMinutes = currentDate.time / 60000
+                       
                        val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
                        val selectedDateInHours = differenceInMinutes / 60
                        val selectedDateInDays = selectedDateInHours / 24
