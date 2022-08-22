@@ -29,14 +29,16 @@ class AgeInMinutes : AppCompatActivity() {
         tvSelectedDateInMinutes = findViewById(R.id.tvSelectedDateInMinutes)
         tvSelectedDateInHours = findViewById(R.id.tvSelectedDateInHours)
         tvSelectedDateInDays = findViewById(R.id.tvSelectedDateInDays)
+ 
+        currentDate?.let {
+          var defaultDateInMinutes = currentDateInMinutes - 17723520
+          var defaultDateInHours = defaultDateInMinutes / 60
+          var defaultDateInDays = defaultDateInHours / 24
 
-        var defaultDateInMinutes = currentDateInMinutes - 17723520
-        var defaultDateInHours = defaultDateInMinutes / 60
-        var defaultDateInDays = defaultDateInHours / 24
-
-        tvSelectedDateInMinutes?.text = defaultDateInMinutes?.toString()
-        tvSelectedDateInHours?.text = defaultDateInHours.toString()
-        tvSelectedDateInDays?.text = defaultDateInDays.toString()
+          tvSelectedDateInMinutes?.text = defaultDateInMinutes.toString()
+          tvSelectedDateInHours?.text = defaultDateInHours.toString()
+          tvSelectedDateInDays?.text = defaultDateInDays.toString()
+        }
 
         val btnBirthdatePicker : Button = findViewById(R.id.btnBirthdatePicker)
         btnBirthdatePicker.setOnClickListener{
