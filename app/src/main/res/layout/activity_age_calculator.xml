@@ -21,13 +21,11 @@
         android:gravity="center"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp">
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -45,14 +43,14 @@
                 tools:layout_editor_absoluteY="194dp" />
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Widget.Material3.Button.Icon"
-                app:icon="@drawable/round_calendar_month_24dp"
                 android:id="@+id/btnBirthdatePicker"
+                style="@style/Widget.Material3.Button.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age_calc_datepicker"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:icon="@drawable/ic_round_calendar_month_24dp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvSelectedDate"
@@ -66,7 +64,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selected Date"
+                android:text="@string/age_calc_selected_date"
                 android:textColor="@color/lightPurpleTextColor"
                 android:textSize="18sp" />
 
@@ -76,8 +74,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/lightGreenTextColor"
-                android:textSize="35sp"
-                android:textIsSelectable="true"/>
+                android:textIsSelectable="true"
+                android:textSize="35sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -92,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/lightGreenTextColor"
-                android:textSize="35sp"
-                android:textIsSelectable="true"/>
+                android:textIsSelectable="true"
+                android:textSize="35sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
@@ -108,8 +106,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/lightGreenTextColor"
-                android:textSize="35sp"
-                android:textIsSelectable="true"/>
+                android:textIsSelectable="true"
+                android:textSize="35sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
