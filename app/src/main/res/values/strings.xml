@@ -12,6 +12,7 @@
     <string name="age_calc">Age Calculator</string>string>
     <string name="age_calc_title">Calculate Your Age</string>
     <string name="age_calc_datepicker">Select Date</string>
+    <string name="age_calc_time_included">Time Included</string>
     <string name="age_calc_selected_date">Selected Date</string>
     <string name="age_in_minutes">Age in Minutes</string>
     <string name="age_in_hours">Age in Hours</string>
