@@ -1,11 +1,10 @@
-package com.kleinreveche.testapps.miniapps
+package com.kleinreveche.testapps.features.age_calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.CompositeDateValidator
@@ -54,7 +53,7 @@ class MaterialAgeCalculator : AppCompatActivity() {
 
     private fun mBtnShowDatePicker() {
         val calendar = Calendar.getInstance()
-        val endDate = calendar.timeInMillis.minus(86400000)
+        val endDate = currentDate!!.time.minus(86400000)
         val calendarConstraintBuilder = CalendarConstraints.Builder().setOpenAt(endDate).setEnd(endDate)
         val validators = ArrayList<CalendarConstraints.DateValidator>()
         validators.add(DateValidatorPointBackward.before(endDate))
@@ -70,7 +69,7 @@ class MaterialAgeCalculator : AppCompatActivity() {
             calendar.timeInMillis = it
             val selectedDate = sdf.parse(sdf.format(datePicker.selection))
 
-            currentDate?.let {
+            currentDate.let {
                 val selectedDateInMinutes = selectedDate?.time?.div(60000)
 
                 val differenceInMinutes =

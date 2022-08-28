@@ -18,7 +18,21 @@
     <string name="age_in_hours">Age in Hours</string>
     <string name="age_in_days">Age in Days</string>
 
+
+    <string name="dice_roller">Dice Roller</string>
+    <string name="roll_label">Roll</string>
+
+
+    <string name="dessert_clicker">Dessert Clicker</string>
+    <string name="dollar_sign">$</string>
+    <string name="zero">0</string>
+    <string name="dessert_sold">Desserts Sold</string>
+    <string name="share_text">I\'ve clicked %1$d Desserts for a total of %2$d$ #AndroidDessertClicker</string>
+    <string name="share">Share</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet,
     </string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

@@ -1,10 +1,9 @@
-package com.kleinreveche.testapps.miniapps
+package com.kleinreveche.testapps.features.age_calculator
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.Toast
 import com.kleinreveche.testapps.R

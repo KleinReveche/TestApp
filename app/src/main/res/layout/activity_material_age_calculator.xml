@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/ic_bg"
     android:paddingTop="80dp"
-    tools:context=".miniapps.AgeCalculator">
+    tools:context=".features.age_calculator.AgeCalculator">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
