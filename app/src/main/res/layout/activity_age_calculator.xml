@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/ic_bg"
     android:paddingTop="80dp"
-    tools:context=".features.age_calculator.AgeCalculator"
+    tools:context=".features.age_calculator.AgeCalculatorLegacyActivity"
     >
 
     <com.google.android.material.card.MaterialCardView
@@ -17,7 +17,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="?attr/colorPrimaryContainer"
         android:gravity="center"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp">
@@ -34,7 +34,7 @@
                 android:layout_marginBottom="15dp"
                 android:gravity="center"
                 android:text="@string/age_calc_title"
-                android:textColor="@color/pixel_blue"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 tools:layout_conversion_absoluteHeight="34dp"
@@ -58,14 +58,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="09/13/2003"
-                android:textColor="@color/lightGreenTextColor"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="20sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age_calc_selected_date"
-                android:textColor="@color/lightPurpleTextColor"
+                android:textColor="?attr/colorTertiary"
                 android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/lightGreenTextColor"
+                android:textColor="?attr/colorSecondary"
                 android:textIsSelectable="true"
                 android:textSize="35sp" />
 
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age_in_minutes"
-                android:textColor="@color/lightPurpleTextColor"
+                android:textColor="?attr/colorTertiary"
                 android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/lightGreenTextColor"
+                android:textColor="?attr/colorSecondary"
                 android:textIsSelectable="true"
                 android:textSize="35sp" />
 
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age_in_hours"
-                android:textColor="@color/lightPurpleTextColor"
+                android:textColor="?attr/colorTertiary"
                 android:textSize="18sp" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/lightGreenTextColor"
+                android:textColor="?attr/colorSecondary"
                 android:textIsSelectable="true"
                 android:textSize="35sp" />
 
@@ -113,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/age_in_days"
-                android:textColor="@color/lightPurpleTextColor"
+                android:textColor="?attr/colorTertiary"
                 android:textSize="18sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test Apps</string>
+    <string name="app_name">Test App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -27,12 +27,62 @@
     <string name="dollar_sign">$</string>
     <string name="zero">0</string>
     <string name="dessert_sold">Desserts Sold</string>
+    <string name="total_revenue">Total Revenue</string>
     <string name="share_text">I\'ve clicked %1$d Desserts for a total of %2$d$ #AndroidDessertClicker</string>
     <string name="share">Share</string>
     <string name="sharing_not_available">Sharing Not Available</string>
 
+    <string name="cupcakes">Cupcake Shop</string>
+    <string name="order_cupcakes">Order Cupcakes</string>
+    <string name="one_cupcake">One Cupcake</string>
+    <string name="six_cupcakes">Six Cupcakes</string>
+    <string name="twelve_cupcakes">Twelve Cupcakes</string>
+    <string name="choose_flavor">Choose Flavor</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="red_velvet">Red Velvet</string>
+    <string name="salted_caramel">Salted Caramel</string>
+    <string name="coffee">Coffee</string>
+    <string name="special_flavor">Special Flavor</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_pickup_date">Choose Pickup Date</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="send">Send Order to Another App</string>
+    <string name="quantity">Quantity</string>
+    <string name="flavor">Flavor</string>
+    <string name="pickup_date">Pickup date</string>
+    <string name="subtotal_price">Subtotal %s</string>
+    <string name="total_price">Total %s</string>
+    <string name="new_cupcake_order">New Cupcake Order</string>
+    <string name="order_details">Quantity: %1$s \n Flavor: %2$s \nPickup date: %3$s \n
+        Total: %4$s \n\n Thank you!</string>
+    <string name="back_button">Back</string>
+    <plurals name="cupcakes">
+        <item quantity="one">%d cupcake</item>
+        <item quantity="other">%d cupcakes</item>
+    </plurals>
+
+    <string name="cafeteria">Cafeteria</string>
+    <string name="choose_accompaniment">Choose Accompaniment</string>
+    <string name="choose_entree">Choose Entree</string>
+    <string name="choose_side_dish">Choose Side Dish</string>
+    <string name="order_checkout">Order Checkout</string>
+    <string name="start_order">Start Order</string>
+    <string name="subtotal">Subtotal: %s</string>
+    <string name="tax">Tax: %s</string>
+    <string name="total">Total: %s</string>
+    <string name="submit">Submit</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet,
     </string>
+
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_compose_age_calculator">ComposeAgeCalculatorActivity</string>
+    <string name="title_activity_cupcake_store">CupcakeStoreActivity</string>
+    <string name="features">Features</string>
+
+    <string name="title_activity_notes">NotesActivity</string>
+    <string name="notes">Your Notes</string>
+    <string name="age_calc_list">Age Calculators</string>
 </resources>
